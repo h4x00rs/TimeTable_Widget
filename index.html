@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>TimeTable</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<script src="app.js"></script>
+<script src="libs.js"></script>
+<script src="loadSchedule.js"></script>
+<script src="processData.js"></script>
+<script src="modelBuild.js"></script>
+<script src="modelBuildTable.js"></script>
+<script src="modelView.js"></script>
+<script>
+    var widget = new Schedule.Widget({
+        //domElement: document.getElementById('asdd'),
+        apiUrl: 'https://er.em70.ru/api/schedule/get',
+        lpu: '0001',
+        week: 0
+    });
+    widget.run();
+</script>
+<table id="myTable" style="width: 100%"></table>
+</body>
+</html>
